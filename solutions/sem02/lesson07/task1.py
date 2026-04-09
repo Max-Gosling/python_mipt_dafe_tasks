@@ -72,14 +72,14 @@ def visualize_diagrams(
             vert=False,
             patch_artist=True,
             boxprops=dict(facecolor="lightsteelblue"),
-            medianprops=dict(color="k")
+            medianprops=dict(color="k"),
         )
         axis_box_vert.boxplot(
-            ordinates, 
+            ordinates,
             vert=True,
             patch_artist=True,
             boxprops=dict(facecolor="lightsteelblue"),
-            medianprops=dict(color="k")
+            medianprops=dict(color="k"),
         )
         axis_box_hor.invert_yaxis()
         axis_box_vert.invert_xaxis()
@@ -102,7 +102,7 @@ def visualize_diagrams(
             abscissa,
             vert=False,
             showmedians=True,
-            )
+        )
         for body in parts_hor["bodies"]:
             body.set_facecolor("cornflowerblue")
             body.set_edgecolor("blue")
@@ -116,7 +116,7 @@ def visualize_diagrams(
             ordinates,
             vert=True,
             showmedians=True,
-            )
+        )
         for body in parts_viol["bodies"]:
             body.set_facecolor("indianred")
             body.set_edgecolor("red")
@@ -129,7 +129,7 @@ def visualize_diagrams(
         axis_viol_vert.invert_xaxis()
     else:
         raise ValueError
-    
+
 
 if __name__ == "__main__":
     mean = [2, 3]
